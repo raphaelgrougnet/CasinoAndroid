@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Casino Richos</string>
+    <string name="hint_connexion">Votre nom</string>
+    <string name="btn_connexion">Connexion</string>
+    <string name="content_description_casino">imageCasino</string>
+    <string name="content_description_counter">imageCounter</string>
+    <string name="content_description_wheel">imageWheel</string>
+    <string name="welcome_player">Bienvenue</string>
+    <string name="balance_player">Votre solde :</string>
+    <string name="btn_play">Accéder aux jeux</string>
+    <string name="btn_bank_counter">Accéder au guichet de banque</string>
+    <string name="welcome_counter">Bienvenue au guichet de banque</string>
+    <string name="hint_counter">Entrez un nombre de jeton à acheter</string>
+    <string name="btn_buy_counter">Acheter les jetons</string>
+    <string name="hint_bet">Mise</string>
+    <string name="hint_prediction">Prédiction</string>
+    <string name="btn_spin">Lancer la roue</string>
+    <string name="radio_even">Pair</string>
+    <string name="radio_odd">Impair</string>
+    <string name="balance_updated">Votre solde a été mis à jour</string>
+</resources>

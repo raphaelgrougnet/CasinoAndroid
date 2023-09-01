@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Casino Richos</string>
+    <string name="hint_connexion">Your name</string>
+    <string name="btn_connexion">Connexion</string>
+    <string name="content_description_casino">imageCasino</string>
+    <string name="content_description_counter">imageCounter</string>
+    <string name="content_description_wheel">imageWheel</string>
+    <string name="welcome_player">Welcome</string>
+    <string name="balance_player">Your balance :</string>
+    <string name="btn_play">Play</string>
+    <string name="btn_bank_counter">Access the bank counter</string>
+    <string name="welcome_counter">Welcome to the bank counter</string>
+    <string name="hint_counter">Enter a number of tokens to buy</string>
+    <string name="btn_buy_counter">Buy tokens</string>
+    <string name="hint_bet">Bet</string>
+    <string name="hint_prediction">Prediction</string>
+    <string name="btn_spin">Spin the wheel</string>
+    <string name="radio_even">Even</string>
+    <string name="radio_odd">Odd</string>
+    <string name="balance_updated">Your sold has been updated</string>
+
+</resources>
