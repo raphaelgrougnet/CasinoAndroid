@@ -43,12 +43,12 @@ class Roulette : AppCompatActivity(), View.OnClickListener {
             }
         }
         editMise.setOnKeyListener(View.OnKeyListener { _, _, _ ->
-            btPlay.isEnabled = (editPrediction.text.toString() != "" && editMise.text.toString() != "") || rdoPair.isChecked || rdoImpair.isChecked
+            btPlay.isEnabled = (editPrediction.text.toString() != "" && editPrediction.text.toString() != "0" && editMise.text.toString() != "") || rdoPair.isChecked || rdoImpair.isChecked
             false
         })
 
         editPrediction.setOnKeyListener(View.OnKeyListener { _, _, _ ->
-            btPlay.isEnabled = (editPrediction.text.toString() != "" && editMise.text.toString() != "") || rdoPair.isChecked || rdoImpair.isChecked
+            btPlay.isEnabled = (editPrediction.text.toString() != "" && editPrediction.text.toString() != "0" && editMise.text.toString() != "") || rdoPair.isChecked || rdoImpair.isChecked
             false
         })
 
