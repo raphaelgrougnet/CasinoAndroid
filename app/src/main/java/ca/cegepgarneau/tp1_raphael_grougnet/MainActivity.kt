@@ -7,22 +7,31 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var btLogin: Button
     private lateinit var prefs: SharedPreferences
+    private lateinit var nomTextEdit: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_connexion)
         btLogin = findViewById(R.id.btnConnexion)
+        nomTextEdit = findViewById<EditText>(R.id.nameText)
         btLogin.setOnClickListener(this)
+        btLogin.isEnabled = false
+        nomTextEdit.setOnKeyListener(View.OnKeyListener { _, _, _ ->
+            btLogin.isEnabled = nomTextEdit.text.toString() != ""
+            false
+        })
     }
     override fun onClick(v: View?) {
         if (v != null) {
             when (v.id) {
                 R.id.btnConnexion -> {
-                    var nomTextEdit = findViewById<EditText>(R.id.nameText)
+
                     var nom = nomTextEdit.text.toString()
+
                     prefs = getSharedPreferences("MonFichierDeSauvegarde", MODE_PRIVATE)
                     var nomStock = prefs.getString(nom, "")
                     val editor = prefs.edit() //pour obtenir une version éditable
