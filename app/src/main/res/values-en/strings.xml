@@ -19,5 +19,9 @@
     <string name="radio_even">Even</string>
     <string name="radio_odd">Odd</string>
     <string name="balance_updated">Your sold has been updated</string>
+    <string name="bet_not_null">The bet cannot be null</string>
+    <string name="prediction_not_null">The prediction cannot be null or exceed 36</string>
+    <string name="win">You won</string>
+    <string name="lose">You lost</string>
 
 </resources>

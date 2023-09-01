@@ -21,7 +21,7 @@ class Accueil :  AppCompatActivity(), View.OnClickListener{
     private lateinit var txtWelcome : TextView
     private lateinit var txtBalance : TextView
     var activiteResultatGuichet: ActivityResultLauncher<Intent>? = null
-    @SuppressLint("SetTextI18n")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_accueil)
