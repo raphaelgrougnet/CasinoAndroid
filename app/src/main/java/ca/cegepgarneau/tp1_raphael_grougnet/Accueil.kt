@@ -64,15 +64,25 @@ class Accueil :  AppCompatActivity(), View.OnClickListener{
             when (v.id) {
                 R.id.btnPlay -> {
                     //Lancer l'activité de la roulette
-                    val intent = Intent()
-                    intent.setClass(this, Roulette::class.java)
-                    startActivity(intent)
+                    if (prefs.getString(prefs.getString("session", "Sans nom"),"0") == "0"){
+                        intent = Intent(applicationContext, Guichet::class.java)
+                        // Méthode de classe Launcher
+                        activiteResultatGuichet!!.launch(intent)
+                    }
+                    else {
+                        val intent = Intent()
+                        intent.setClass(this, Roulette::class.java)
+                        startActivity(intent)
+                    }
                 }
                 R.id.btnBankCounter -> {
                     //Lancer l'activité du guichet
-                    intent = Intent(applicationContext, Guichet::class.java)
-                    // Méthode de classe Launcher
-                    activiteResultatGuichet!!.launch(intent)
+                        intent = Intent(applicationContext, Guichet::class.java)
+                        // Méthode de classe Launcher
+                        activiteResultatGuichet!!.launch(intent)
+
+
+
                 }
             }
         }

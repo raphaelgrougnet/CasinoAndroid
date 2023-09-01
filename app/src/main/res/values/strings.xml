@@ -18,6 +18,7 @@
     <string name="radio_even">Pair</string>
     <string name="radio_odd">Impair</string>
     <string name="balance_updated">Votre solde a été mis à jour</string>
+    <string name="buy_token">Veuillez acheter des jetons pour jouer</string>
     <string name="bet_not_null">La mise ne peut pas être nulle</string>
     <string name="prediction_not_null">La prédiction ne peut pas être nulle ou exéder 36</string>
     <string name="win">Vous avez gagné</string>
