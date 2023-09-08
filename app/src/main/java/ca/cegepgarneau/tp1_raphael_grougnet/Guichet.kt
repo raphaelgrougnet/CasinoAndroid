@@ -14,8 +14,11 @@ class Guichet : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_guichet)
+        //Récupération du bouton
         btBuy = findViewById(R.id.btnBuyCounter)
+        //Ajout du listener
         btBuy.setOnClickListener(this)
+        //Récupération des SharedPreferences
         prefs = getSharedPreferences("MonFichierDeSauvegarde", MODE_PRIVATE)
 
     }

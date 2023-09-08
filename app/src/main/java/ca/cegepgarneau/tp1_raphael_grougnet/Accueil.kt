@@ -25,23 +25,32 @@ class Accueil :  AppCompatActivity(), View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_accueil)
+        //Récupération des SharedPreferences
         prefs = getSharedPreferences("MonFichierDeSauvegarde", MODE_PRIVATE)
+
+        //Récupération des boutons
         btPlay = findViewById(R.id.btnPlay)
         btCounter = findViewById(R.id.btnBankCounter)
         btPlay.setOnClickListener(this)
         btCounter.setOnClickListener(this)
+
+        //Récupération du nom de l'utilisateur
         var nom = prefs.getString("session", "Sans nom")
-        //Récuppération des données dans les SharedPreferences
+
+        //Récuppération des jetons dans les SharedPreferences
         var jetons = prefs.getString(nom, "0")
 
+        //Récupération des TextView
         txtWelcome = findViewById(R.id.txtWelcomeHome)
         txtBalance = findViewById(R.id.txtBalanceHome)
+
         //Mettre le nom de l'utilisateur dans le titre de l'activité
         txtWelcome.text = getString(R.string.welcome_player) + " " + nom
+
         //Mettre le nombre de jetons de l'utilisateur dans le bouton de la banque
         txtBalance.text = jetons
 
-
+        //Création de l'activité du guichet
         activiteResultatGuichet = registerForActivityResult<Intent, ActivityResult>(
             ActivityResultContracts.StartActivityForResult()
         ) { result ->
@@ -66,7 +75,7 @@ class Accueil :  AppCompatActivity(), View.OnClickListener{
                     //Lancer l'activité de la roulette
                     if (prefs.getString(prefs.getString("session", "Sans nom"),"0") == "0"){
                         intent = Intent(applicationContext, Guichet::class.java)
-                        // Méthode de classe Launcher
+
                         activiteResultatGuichet!!.launch(intent)
                     }
                     else {
@@ -75,11 +84,12 @@ class Accueil :  AppCompatActivity(), View.OnClickListener{
                         startActivity(intent)
                     }
                 }
+                //Lancer l'activité du guichet
                 R.id.btnBankCounter -> {
                     //Lancer l'activité du guichet
-                        intent = Intent(applicationContext, Guichet::class.java)
-                        // Méthode de classe Launcher
-                        activiteResultatGuichet!!.launch(intent)
+                    intent = Intent(applicationContext, Guichet::class.java)
+                    // Méthode de classe Launcher
+                    activiteResultatGuichet!!.launch(intent)
 
 
 

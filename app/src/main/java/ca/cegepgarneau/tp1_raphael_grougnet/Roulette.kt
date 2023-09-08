@@ -20,6 +20,7 @@ class Roulette : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_roulette)
+        //Récuperation du boutons
         btPlay = findViewById(R.id.btnPlayWheel)
         editMise = findViewById(R.id.edtBetWheel)
         editPrediction = findViewById(R.id.edtPredictionWheel)
@@ -28,6 +29,7 @@ class Roulette : AppCompatActivity(), View.OnClickListener {
 
         btPlay.setOnClickListener(this)
 
+        //On listen le button Pair
         rdoPair.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 editPrediction.text.clear()
@@ -35,6 +37,7 @@ class Roulette : AppCompatActivity(), View.OnClickListener {
                 btPlay.isEnabled = editMise.text.toString() != ""
             }
         }
+        //On listen le button Impair
         rdoImpair.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 editPrediction.text.clear()
