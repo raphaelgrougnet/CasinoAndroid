@@ -72,7 +72,7 @@ class Roulette : AppCompatActivity(), View.OnClickListener {
 
                     if (mise > jetons?.toInt()!!){
                         var intent = intent
-                        intent.setClass(this, Guichet::class.java)
+                        intent.setClass(this, Accueil::class.java)
                         startActivity(intent)
                     }
                     else{
